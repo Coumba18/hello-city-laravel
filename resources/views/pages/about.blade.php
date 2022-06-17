@@ -4,7 +4,7 @@
 
 @section('content')
      
-     <img src="/images/km-logo.jfif" alt="Kumba">
+     <img src="{{asset('images/km-logo.jfif')}}" alt="Kumba">
      <p>Built with &hearts; by Coumba NGOM.</p>
 
     <p><a href="{{route('home')}}">Come back to home page</a></p>
