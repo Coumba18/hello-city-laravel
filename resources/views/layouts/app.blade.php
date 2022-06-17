@@ -4,7 +4,8 @@
         <meta charset="utf-8">
         <meta name="viewport" content="width=device-width, initial-scale=1">
 
-        <title>@yield('title', config('app.name'))</title>
+        <!-- <title>{{isset($pageTitle) ? $pageTitle . '|' .config('app.name') : config('app.name')}}</title> -->
+        <title>{{page_title($pageTitle ?? null)}}</title>
 
         <script src="https://cdn.tailwindcss.com"></script>
 
@@ -14,16 +15,6 @@
            @yield('content')
         </main>
         
-
-        <footer>
-            <p class="text-gray-400">
-                &copy; Copyright {{ date('Y')}}
-
-                @if(! Route::is('about'))
-                 &middot; 
-                <a href="{{route('about')}}" class="text-green-500 hover:text-green-600 underline">About Us</a>
-                @endif
-            </p>
-        </footer>
+        @include('layouts/partials/_footer')
     </body>
 </html>
