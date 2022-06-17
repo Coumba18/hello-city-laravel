@@ -4,10 +4,16 @@
 
 @section('content')
      
-     <img src="{{asset('images/km-logo.jfif')}}" alt="Kumba">
-     <p>Built with &hearts; by Coumba NGOM.</p>
+     <img src="{{asset('images/km-logo.jfif')}}" alt="Kumba" class="my-12 rounded-full shadow-md">
+     <h2 class="mb-5 text-gray-700">
+        Built with 
+        <span class="text-pink-500">&hearts;</span>
+         by Coumba NGOM.
+    </h2>
 
-    <p><a href="{{route('home')}}">Come back to home page</a></p>
+    <p>
+        <a href="{{route('home')}}" class="text-indigo-500 hover:text-indigo-600 underline">Come back to home page</a>
+    </p>
 
 @endsection
     
